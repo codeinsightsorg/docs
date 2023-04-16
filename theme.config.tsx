@@ -11,9 +11,6 @@ const config: DocsThemeConfig = {
     defaultTheme: "dark",
   },
   primaryHue: { light: 281, dark: 280 },
-  chat: {
-    link: "https://discord.com",
-  },
   darkMode: false,
   docsRepositoryBase: "https://github.com/yaircohendev/codeinsightsjs",
   footer: {
@@ -21,6 +18,11 @@ const config: DocsThemeConfig = {
       <span>&copy; Copyright {new Date().getFullYear()} CodeInsightsJS.</span>
     ),
   },
+  useNextSeoProps() {
+    return {
+      titleTemplate: '%s – CodeInsights'
+    }
+  }
 };
 
 export default config;

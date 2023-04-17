@@ -3,7 +3,7 @@
 | Name          | Type       | Default Value | Description                                            | Supported in CLI |
 |---------------|------------|---------------|--------------------------------------------------------|-------------------|
 | repoPath      | `string`     | `null`          | Absolute path of the repository or GitHub URL          | x |
-| ignoreFolders | `string[]`   | `[]`            | List of folder names to ignore during the scan          |
+| ignoreFolders | `string[]`   | `[]`            | List of folder names to ignore during the scan (relative path), regex is supported          |
 | useDefaultPlugins | `boolean`   | `true`            | Whether to use the default built-in plugins or not          |
 | plugins | `(Plugin\|string)[]`   | `DefaultPlugins`       | List of plugins to be used, can use the Plugin object or the full path          |
 

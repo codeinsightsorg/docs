@@ -10,30 +10,20 @@ The ideal method depends on your specific requirements.
 
 ## Usage in an existing repository
 
-First, install the package:
+First, create a configuration file called `codeinsights.config.ts` in the root of your repository (`.js` and `.json` files are also supported)
+
+Then, run the following command:
 
 ```bash
-$ npm install --save-dev @codeinsights/js
-```
-
-Then, create a configuration file called `codeinsights.config.ts` in the root of your repository. (`.js` and `.json` files are also supported)
-
-Finally, run the following command:
-
-```bash
-codeinsights
+$ npx @codeinsights/js
 ```
 
 ## Usage from command line
 ```bash
-$ npm i -g @codeinsights/js@latest
-$ codeinsights --repoPath "/path/to/repo"
-```
-
-Or if you don't want to install it globablly:
-```bash
 $ npx @codeinsights/js@latest --repoPath "/path/to/repo"
 ```
+
+> --repoPath can either be an absolute path to the repo, or a Github URL
 
 ## Usage from NodeJS
 

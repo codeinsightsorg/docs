@@ -1,8 +1,18 @@
-# Configuration
+# Repo Configuration
 
-| Name          | Type       | Default Value | Description                                            | Supported in CLI |
-|---------------|------------|---------------|--------------------------------------------------------|-------------------|
-| repoPath      | `string`     | `null`          | Absolute path of the repository or GitHub URL          | x |
+First, create a configuration file called `codeinsights.config.ts` in the root of your repository (`.js` and `.json` files are also supported)
+
+Then, run the following command:
+
+```bash
+$ npx @codeinsights/js
+```
+
+## Configuration
+
+| Name          | Type       | Default Value | Description                                            |
+|---------------|------------|---------------|--------------------------------------------------------|
+| repoPath      | `string`     | `null`          | Absolute path of the repository or GitHub URL          |
 | ignoreFolders | `string[]`   | `[]`            | List of folder names to ignore during the scan (relative path), regex is supported          |
 | useDefaultPlugins | `boolean`   | `true`            | Whether to use the default built-in plugins or not          |
 | plugins | `(Plugin\|string)[]`   | `DefaultPlugins`       | List of plugins to be used, can use the Plugin object or the full path          |
@@ -39,11 +49,10 @@ const config: ConfigModel = {
       },
     },
   ],
-};
   disabled?: boolean;
   params?: T;
   path: string;
   beforeHooks: Record<BeforeHookKeys, string>;
-
+};
 module.exports = config;
 ```

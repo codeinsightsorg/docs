@@ -1,0 +1,19 @@
+# Node.JS Library
+
+First, install the package:
+
+```bash
+$ npm install @codeinsights/js
+```
+
+Then, call the init function with the repository URL, or path:
+```typescript
+import { init } from "@codeinsights/js/lib/src/api";
+
+ const result = await init({
+    repoPath: url
+  })
+}
+```
+
+The `init` function accepts a configuration object of type `ConfigurationModel`. To see all the available options, check the [Repo Configuration](./configuration#configuration) page.

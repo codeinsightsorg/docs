@@ -1,4 +1,7 @@
 {
-  "built-in": "Built-in plugins",
-  "custom": "Creating a custom plugin"
+  "overview": "Overview",
+  "analyzer": "Analyzer Plugins",
+  "post-processors": "Post-Processors Plugins",
+  "custom": "Custom Plugin"
 }
+

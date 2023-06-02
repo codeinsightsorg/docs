@@ -23,14 +23,14 @@ const Head: React.FC = () => {
 const config: DocsThemeConfig = {
   logo: <Image alt="logo" src="/Logo.png" width={180} height={60} />,
   project: {
-    link: "https://github.com/yaircohendev/codeinsightsjs",
+    link: "https://github.com/codeinsightsorg/codeinsights",
   },
   nextThemes: {
     defaultTheme: "dark",
   },
   primaryHue: { light: 281, dark: 280 },
   darkMode: false,
-  docsRepositoryBase: "https://github.com/yaircohendev/codeinsightsjs",
+  docsRepositoryBase: "https://github.com/codeinsightsorg/codeinsights",
   footer: {
     text: (
       <span>&copy; Copyright {new Date().getFullYear()} CodeInsightsJS.</span>

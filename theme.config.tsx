@@ -33,7 +33,7 @@ const config: DocsThemeConfig = {
   docsRepositoryBase: "https://github.com/codeinsightsorg/codeinsights",
   footer: {
     text: (
-      <span>&copy; Copyright {new Date().getFullYear()} CodeInsightsJS.</span>
+      <span>&copy; Copyright {new Date().getFullYear()} CodeInsights.</span>
     ),
   },
   head: Head,

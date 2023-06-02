@@ -23,7 +23,7 @@ $ npx @codeinsights/js
 |---------------|------------|---------------|--------------------------------------------------------|
 | disabled      | `boolean`     | `false`          | Disable the plugin          |
 | params | `any`   | `null`            | Custom parameters to pass the plugin          |
-| path       | `string`   | `null`         | An absolute path to the plugin, or plugin name if using one of the built-in ones |
+| path       | `string`   | `null`         | An absolute path to the plugin, or plugin id if using one of the built-in ones |
 
 
 ## Configuration Example
@@ -37,7 +37,7 @@ const config: ConfigModel = {
   plugins: [
     'angular',
     {
-      path: 'plugins/used-html-tags.ts',
+      path: 'html',
       params: {
         matchPattern: '^mat' // only components from angular material,
       },

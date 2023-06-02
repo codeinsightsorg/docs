@@ -9,20 +9,20 @@ There are two primary categories of plugins:
 
 ## Analyzer Plugins
 
-| Name          | Description       | Is Used By Default
+| id          | Description       | Is Used By Default
 |---------------|------------|--------------------------------------------------------
-| ImportsPlugin | Information about all the imports (importedFrom, and imported)   | x          |
-| TSFilePlugin      | Get information about functions and files     | x
-| HTMLTagsPlugin      | Get all used tags     |  x
-| AngularPlugin      | Count the number of components     |
+| imports | Information about all the imports (importedFrom, and imported)   | x          |
+| ts      | Get information about functions and files     | x
+| htmltags      | Get all used tags     |  x
+| dependencies      | Get information about your depedndencies from `package.json`     | x |
+
 
 ## Post-Processors Plugins
 
 These plugins are used as post-processors, and work on the entire result of the analysis.
 
-| Name          | Description       | Is Used By Default
+| id          | Description       | Is Used By Default
 |---------------|------------|--------------------------------------------------------
-| ChartJSPlugin | Generate ChartJS graphs, based on the count of labels, as well as combination of labels and metrics   | x          |
-| ConsoleLogPlugin | Output result to console log   |
-| CoralogixFinalizer | Send the entire result to Coralogix   |
-| OpenSearchFinalizer | Send the entire result to OpenSearch   |
+| charts | Generate ChartJS graphs, based on the count of labels, as well as combination of labels and metrics   | x          |
+| coralogix | Send the entire result to Coralogix   |
+| opensearch | Send the entire result to OpenSearch   |

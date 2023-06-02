@@ -1,0 +1,24 @@
+# Coralogix Plugin
+
+## Plugin Details
+
+The Coralogix Plugin allows you to send your logs to Coralogix. You can then use Coralogix Dashboards,
+or the hosted OpenSearch dashboards to visualize those logs, or setup alerts based on these logs.
+
+| id                 | Is Used By Default
+|---------------|--------------------------------------------------------
+| coralogix    |          |
+
+## Parameters
+
+| name                 | Description | Default Value
+|---------------|------------------------------ | ------
+| clusterURL    | Coralogix [Cluster URL](https://coralogix.com/docs/coralogix-domain/)          |  https://api.coralogix.com/api/v1/logs |
+| applicationName    | Application name          | codeinsights
+| subsystemName    | Subsystem name          | codeinsights
+
+## Environment Variables
+
+| name                 | Description
+|---------------|--------------------------------------------------------
+| CGX_PRIVATE_KEY    |   "Send your data" private key       |

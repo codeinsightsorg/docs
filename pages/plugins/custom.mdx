@@ -8,7 +8,7 @@ A plugin is a class that implements the `BasePlugin` interface. This interface d
 | Property                 | Type                                            | Description                                      |
 |--------------------------|-------------------------------------------------|--------------------------------------------------|
 | onFinishProcessing       | `() => PluginAnalyzedEntity[]`                  | Callback function called when processing of all files finishes. |
-| onAllFinishProcessing    | `(items: AnalyzeResults, plugin: BasePlugin) => any` | Callback function called when processing of **all plugins** finishes.  |
+| onAllFinishProcessing    | `(items: AnalyzeResults, plugin: BasePlugin) => any` | Callback function called when processing of **all plugins** finishes. Used for post-processor plugins  |
 | fileExtensions           | `RegExp[]`                                      | Which files CodeInsights should scan |
 | analyzeFile              | `(analyzeInfo: T, pluginOptions: PluginOptions) => any` | Called on each file, this is where the logic of extracing the insights from the code exists |
 | parser                   | `Parser`                                        | One of the supported parsers (TypeScript, HTML, or JSON)|

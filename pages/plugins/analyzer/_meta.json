@@ -2,6 +2,5 @@
   "ts": "JavaScript/TypeScript Plugin",
   "imports": "Imports Plugin",
   "html": "HTML Plugin",
-  "dependencies": "Dependencies Plugin",
-  "angular": "Angular Plugin"
+  "dependencies": "Dependencies Plugin"
 }

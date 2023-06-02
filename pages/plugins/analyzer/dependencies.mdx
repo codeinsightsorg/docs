@@ -1,0 +1,26 @@
+# Dependencies Plugin
+
+## Plugin Details
+
+This plugin analyzes your `package.json` file and extracts all the `dependencies` and `devDependencies`. Can be used
+to visualize the different dependencies and their versions.
+
+| id                 | Is Used By Default
+|---------------|--------------------------------------------------------
+| dependencies    | x          |
+
+## Output Example
+
+```json
+[
+    {
+      "type": "dependancy",
+      "path": "package.json",
+      "labels": {
+        "name": "@babel/parser",
+        "version": "^7.21.3",
+        "dependencyType": "dependencies"
+      }
+    }
+]
+```

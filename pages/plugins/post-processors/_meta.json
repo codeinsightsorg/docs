@@ -1,6 +1,5 @@
 {
-  "chartjs": "ChartJS Plugin",
-  "console": "Console Log Plugin",
+  "charts": "ChartJS Plugin",
   "opensearch": "OpenSearch Plugin",
   "coralogix": "Coralogix Plugin"
 }

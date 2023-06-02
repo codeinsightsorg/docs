@@ -1,0 +1,31 @@
+# HTML Plugin
+
+The HTML Plugin provides information about all the tags in your HTML files. It can be used
+to detect which tags are the most common in your application.
+
+A common use case is for component libraries, if your components all start with a prefix, for example `mat-` you can filter
+the plugin to gather information only about those, then use the result to detect which components are the most
+used in your application.
+
+## Plugin Details
+
+This plugin extracts information about JavaScript and TypeScript files, and functions. It can be used to visualize
+the lines of code in your functions or files.
+
+| id                 | Is Used By Default
+|---------------|--------------------------------------------------------
+| html    | x          |
+
+## Output Example
+
+```json
+[
+  {
+    "type": "tag",
+    "path": "dashboard.component.html",
+    "labels": {
+          "name": "mat-button"
+        }
+  }
+]
+```

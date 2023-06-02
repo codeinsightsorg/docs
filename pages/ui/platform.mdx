@@ -1,0 +1,26 @@
+# Centralized Logging Platform
+
+The fastest and easiest way to visualize your data is to send the output result to a logging platform.
+
+OpenSearch allows you to both explore your data, and create visualizations and dashboards. Paid platforms like Coralogix, DataDog and Splunk offer similiar capabilities.
+
+### Running OpenSearch
+
+The CodeInsights library comes ready with a `docker-compose` file, containing both OpenSearch and OpenSearch dashboards.
+
+Clone the repository, and run the following command to run it:
+
+```bash
+docker-compose up
+```
+
+Then use the [OpenSearch](/plugins/post-processors/coralogix) plugin.
+
+### Sending Data to a Vendor
+
+You can send the data to a logging vendor by creating a custom post-processor plugin, or by using the existing built in ones.
+
+Right now we support the following vendors:
+* [Coralogix](/plugins/post-processors/coralogix)
+
+Make sure to go over the documentation of the plugin you are using to understand how to configure it.

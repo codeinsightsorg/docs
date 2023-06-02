@@ -1,0 +1,26 @@
+# Imports Plugin
+
+## Plugin Details
+
+This plugin extracts information about JavaScript and TypeScript files, and functions. It can be used to visualize
+the lines of code in your functions or files.
+
+| id                 | Is Used By Default
+|---------------|--------------------------------------------------------
+| imports    | x          |
+
+## Output Example
+
+```json
+[
+    {
+      "type": "import",
+      "metrics": {},
+      "path": "utils.ts",
+      "labels": {
+        "name": "get",
+        "importedFrom": "lodash"
+      }
+    }
+]
+```

@@ -1,0 +1,28 @@
+# Plugins Overview
+
+CodeInsights is designed around a versatile plugin system that not only allows you to utilize the built-in plugins but also enables you to [create your own](./plugins/custom).
+
+There are two primary categories of plugins:
+
+1. [**Analyzers**](./analyzer) - These plugins are used to analyze files in your repository and derive insights from them.
+2. [**Post-Processors**](./post-processors) - These plugins are responsible for processing the final results, such as sending them to a logging system or generating visual representations like charts.
+
+## Analyzer Plugins
+
+| id          | Description       | Is Used By Default
+|---------------|------------|--------------------------------------------------------
+| imports | Information about all the imports (importedFrom, and imported)   | x          |
+| ts      | Get information about functions and files     | x
+| htmltags      | Get all used tags     |  x
+| dependencies      | Get information about your depedndencies from `package.json`     | x |
+
+
+## Post-Processors Plugins
+
+These plugins are used as post-processors, and work on the entire result of the analysis.
+
+| id          | Description       | Is Used By Default
+|---------------|------------|--------------------------------------------------------
+| charts | Generate ChartJS graphs, based on the count of labels, as well as combination of labels and metrics   | x          |
+| coralogix | Send the entire result to Coralogix   |
+| opensearch | Send the entire result to OpenSearch   |

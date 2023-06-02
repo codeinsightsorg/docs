@@ -1,6 +1,7 @@
 {
   "index": "Introduction",
-  "getting-started": "Getting Started",
+  "running": "Running CodeInsights",
+  "ui": "Visualizing Data",
   "plugins": "Plugins",
   "roadmap": "Roadmap",
   "explore": {

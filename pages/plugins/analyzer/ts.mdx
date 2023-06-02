@@ -1,0 +1,45 @@
+# JavaScript/TypeScript Plugin
+
+## Plugin Details
+
+This plugin extracts information about JavaScript and TypeScript files, and functions. It can be used to visualize
+
+| id                 | Is Used By Default
+|---------------|--------------------------------------------------------
+| ts    | x          |
+
+## Output Example
+### Files
+```json
+[
+    {
+      "type": "file",
+      "path": "api.ts",
+      "labels": {
+        "isTestFile": false
+      },
+      "metrics": {
+        "loc": 10
+      }
+    },
+...
+]
+```
+
+### Functions
+```json
+[
+    {
+      "type": "function",
+      "path": "api.ts",
+      "metrics": {
+        "loc": 3
+      },
+      "labels": {
+        "functionType": "FunctionDeclaration",
+        "name": "init"
+      }
+},
+...
+]
+```

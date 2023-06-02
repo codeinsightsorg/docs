@@ -1,0 +1,96 @@
+# Charts Plugin
+
+## Plugin Details
+
+The Charts plugin generates ChartsJS charts automatically from the results of CodeInsights.
+
+It works by generating charts on a combination of all the labels and metrics, as well as charts that count the unique value of every label.
+
+| id                 | Is Used By Default
+|---------------|--------------------------------------------------------
+| charts    |      x    |
+
+## Output Example
+
+```json
+[
+    {
+      "key": "fileName by loc",
+      "chartType": "bar",
+      "labels": [
+        "env.ts",
+        "general.model.ts",
+        "api.ts",
+        "config.model.ts",
+        "html-plugin.ts",
+        "plugins-list.ts",
+        "utils.ts",
+        "fs.utils.ts",
+        "html-plugin.model.ts",
+        "json-plugin.model.ts",
+        "json-plugin.ts",
+        "plugin-analyze.ts",
+        "typescript-plugin.ts",
+        "typescript-plugin.model.ts",
+        "process.ts",
+        "plugins.constants.ts",
+        "constants.ts",
+        "controller.ts",
+        "repo-data.ts",
+        "read-config.ts",
+        "coralogix-plugin.ts",
+        "plugin.model.ts",
+        "ast.ts",
+        "analyze-plugin.ts",
+        "opensearch-plugin.ts",
+        "analyze.model.ts",
+        "dependencies-plugin.ts",
+        "used-html-tags.ts",
+        "index.ts",
+        "config.ts",
+        "imports.ts",
+        "angular-plugins.ts",
+        "ts-file.ts",
+        "analyzer.ts",
+        "chartsjs-plugin.ts"
+      ],
+      "values": [
+        2,
+        4,
+        10,
+        10,
+        11,
+        11,
+        11,
+        12,
+        13,
+        13,
+        14,
+        14,
+        15,
+        18,
+        21,
+        22,
+        24,
+        28,
+        29,
+        35,
+        35,
+        36,
+        38,
+        40,
+        43,
+        50,
+        51,
+        53,
+        61,
+        62,
+        63,
+        66,
+        95,
+        103,
+        170
+      ],
+    }
+]
+```

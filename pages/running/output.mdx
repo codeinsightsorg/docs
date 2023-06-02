@@ -1,0 +1,41 @@
+# Output Example
+
+```json
+{
+  "plugins": [
+    {
+      "plugin": {
+        "name": "TSFilePlugin",
+        ...
+      },
+      "pluginData": [
+        {
+          "baseInfo": {
+            "path": "user.component.ts",
+            "type": "file",
+            "labels": {
+              "filePath": "src/user/user.component.ts",
+              "fileName": "user.component.ts"
+            },
+            "metrics": {
+              "fileLinesOfCode": 53
+            }
+          },
+          "analyzed": {
+            "type": "function",
+            "path": "src/user/user.component.ts",
+            "metrics": {
+              "loc": 15
+            },
+            "labels": {
+              "functionType": "ClassMethod",
+              "name": "ngOnInit"
+            }
+          }
+        }
+        ...
+      ]
+    }
+  ]
+}
+```

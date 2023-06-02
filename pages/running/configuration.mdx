@@ -35,7 +35,8 @@ import { ConfigModel } from '@codeinsights/js';
 const config: ConfigModel = {
   ignoreFolders: ['node_modules', 'public', 'src/assets'],
   plugins: [
-    'angular',
+    '/user/path-to-custom-plugin.ts',
+    'dependencies', // built-in plugin
     {
       path: 'html',
       params: {
@@ -43,10 +44,6 @@ const config: ConfigModel = {
       },
     },
   ],
-  disabled?: boolean;
-  params?: T;
-  path: string;
-  beforeHooks: Record<BeforeHookKeys, string>;
 };
 module.exports = config;
 ```

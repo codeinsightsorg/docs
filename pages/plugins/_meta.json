@@ -3,6 +3,6 @@
   "using": "Using Plugins",
   "analyzer": "Analyzer Plugins",
   "post-processors": "Post-Processors Plugins",
-  "custom": "Custom Plugin"
+  "custom": "Creating a Custom Plugin"
 }
 

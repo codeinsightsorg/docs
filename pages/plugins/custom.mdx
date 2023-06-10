@@ -4,23 +4,22 @@ If you wish to extract information from your code that is not available with a b
 
 ## Plugin Model
 
-A plugin is a class that implements the `BasePlugin` interface. This interface defines the following properties:
+A plugin is a class that implements the `BaseAnalyzerPluginModel` interface. This interface defines the following properties:
 | Property                 | Type                                            | Description                                      |
 |--------------------------|-------------------------------------------------|--------------------------------------------------|
 | onFinishProcessing       | `() => PluginAnalyzedEntity[]`                  | Callback function called when processing of all files finishes. |
 | onAllFinishProcessing    | `(items: AnalyzeResults, plugin: BasePlugin) => any` | Callback function called when processing of **all plugins** finishes. Used for post-processor plugins  |
 | fileExtensions           | `RegExp[]`                                      | Which files CodeInsights should scan |
 | analyzeFile              | `(analyzeInfo: T, pluginOptions: PluginOptions) => any` | Called on each file, this is where the logic of extracing the insights from the code exists |
-| parser                   | `Parser`                                        | One of the supported parsers (TypeScript, HTML, or JSON)|
 | name                     | `string`                                        | Name of the plugin. |
 
 Keep in mind that all of these properties are optional, so you can use only the ones you need.
 
 ## Plugin Types
 
-Start by creating a class with your plugin name. The plugin needs to implement one of the following interfaces:
+Start by creating a class with your plugin name. The plugin needs to extends one of the following classes:
 
-1. BaseAnalyzerPlugin - use this if you don't intend to parse any files with the plugin, but only do post-processing.
+1. BaseAnalyzerPlugin - use this if you don't intend to parse any files with the plugin, but only do post-processing, or if you want to parse files that are not supported by CodeInsights.
 2. TypeScriptPlugin - use this if you intend to parse JS/TS files.
 3. HTMLPlugin - use this if you intend to parse HTML files.
 4. JSONPlugin - use this if you intend to parse JSON files.
@@ -29,11 +28,10 @@ These type of plugins will dictate which parser that CodeInsights will use to an
 
 ### Example
 
-For this example, we'll choose the TypeScriptPlugin interface:
+For this example, we'll choose the TypeScriptPlugin:
 
 ```typescript
-class ImportsPlugin implements TypeScriptPlugin {
-  parser = "TypeScript" as const; // important to specify the parser
+class ImportsPlugin extends TypeScriptPlugin {
   fileExtensions = ["ts", "js"] // optional, this is the default with TypeScriptPlugin
 
   analyzeFile({ labels, visit }: TypeScriptAnalyzeInfo) {
@@ -72,9 +70,8 @@ interface ImportDefinition {
   };
 }
 
-class ImportsPlugin implements TypeScriptPlugin {
+class ImportsPlugin extends TypeScriptPlugin {
   allFilesImports: ImportDefinition[] = [];
-  parser = "TypeScript" as const;
 
   analyzeFile({ labels, visit }: TypeScriptAnalyzeInfo) {
     const { filePath } = labels;
